@@ -2,31 +2,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Timers;
 
 namespace C__Örneklerim
 {
+    /* 
+*/
     class Program
     {
 
         static void Main(string[] args)
         {
-            Func<int, bool> g = (x) => x > 5;
-            var list = Enumerable.Range(1, 30).ToList();
-            var hh = WWhere((t) => t > 15, list);
-            hh.ForEach((i) => System.Console.WriteLine(i));
+            var x = new System.Timers.Timer();
+            x.Enabled = true;
+            x.Interval = 201;
+            x.Elapsed += (sender, e) => ornekkod();
+            Console.ReadKey();
         }
-        static Func<Func<int, bool>, List<int>, List<int>> WWhere = (t, f) =>
-         {
-             List<int> List = new List<int>();
-             foreach (var u in f)
-             {
-                 if (t(u))
-                     List.Add(u);
-             }
-             return List;
-         };
+        static void ornekkod()
+        {
+            System.Console.WriteLine("OrnekKodstarted");
+            Thread.Sleep(1000);
+            System.Console.WriteLine("Ornekkod ended");
 
-
+        }
     }
-
 }
