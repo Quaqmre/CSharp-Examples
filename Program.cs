@@ -13,21 +13,13 @@ namespace C__Örneklerim
 */
     class Program
     {
-
         static void Main(string[] args)
         {
-            var x = new System.Timers.Timer();
-            x.Enabled = true;
-            x.Interval = 201;
-            x.Elapsed += (sender, e) => ornekkod();
-            Console.ReadKey();
-        }
-        static void ornekkod()
-        {
-            System.Console.WriteLine("OrnekKodstarted");
-            Thread.Sleep(1000);
-            System.Console.WriteLine("Ornekkod ended");
+            var t = g;
+            System.Console.WriteLine(t((5, 6, 7)).Item1);
+
 
         }
+        static Func<(int i, int ii, int iii), (int, int, int)> g = (t) => (t.i * 2, t.ii * 2, t.iii * 2);
     }
 }
