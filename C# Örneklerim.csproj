@@ -4,6 +4,8 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>C__Örneklerim</RootNamespace>
+    <LangVersion>latest</LangVersion>
+
   </PropertyGroup>
 
 </Project>
