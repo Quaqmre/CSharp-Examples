@@ -10,7 +10,8 @@
 
 // namespace C__Örneklerim
 // {
-//     /* 
+//     /*
+// Denenmeye çalışılan şey single thread işlem kapasitesi ile multi thread işlem kapasitesini karşılaştırmak
 // */
 //     class Program
 //     {
