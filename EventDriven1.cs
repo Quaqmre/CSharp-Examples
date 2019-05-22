@@ -13,6 +13,8 @@ Invoke edebilirler,Saat ticki gibi bu Ana metot her çağrıldığında bir flag
 Diğer subs olacak metotlar bu flagın bellirli koşullarını sağladıklarında Invoke edilir.
 Hedef! Bu yapıyı kullanarak kendi tick eventini oluştur.
 
+
+
  */
 //         static Action outofmetot = () => System.Console.WriteLine("Dışardan bir metor");
 //         static Action metot1(Action t)
