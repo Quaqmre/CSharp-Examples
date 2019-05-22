@@ -16,12 +16,15 @@
 // Soru? Döngümü yanlış yazılmıştır,Yoksa thread geçişlerinde microprossesors bu geçişlerde bir uyku saniyesi vardır,
 // Bu uyku saniyesinemi takılınmıştır,Bu artış bundan mı kaynaklanmaktadır??
 
+// Son olarak Task metoduda eklendi,New Task olarak Action metoduna parametre geçme örneğinede bu proje altından erişilebilir,
+
+
 
 // */
 //     class Program
 //     {
 //         static long toplam = 0;
-//         static byte[] values = new byte[50000000];
+//         static byte[] values = new byte[5000000];
 //         static void Main(string[] args)
 //         {
 //             System.Console.WriteLine("started progress");
@@ -35,7 +38,7 @@
 //             System.Console.WriteLine(asd.Elapsed);
 //             asd.Reset();
 //             asd.Start();
-//             System.Console.WriteLine("Multiple");
+//             System.Console.WriteLine("MultipleThreading");
 //             Thread[] listth = new Thread[Environment.ProcessorCount];
 //             for (int t = 0; t < Environment.ProcessorCount; t++)
 //             {
@@ -47,6 +50,20 @@
 
 //             asd.Stop();
 //             System.Console.WriteLine(asd.Elapsed);
+//             asd.Reset();
+//             asd.Start();
+//             System.Console.WriteLine("MultipleTasking");
+//             Task[] listth1 = new Task[Environment.ProcessorCount];
+//             for (int t = 0; t < Environment.ProcessorCount; t++)
+//             {
+//                 listth1[t] = Task.Factory.StartNew(akif, t);
+////new Task(akif, t).RunSynchronously(); Şeklinde syncron bir şekilde execute edilebilir,
+
+//
+//             }
+//             Task.WaitAll(listth1);
+//             System.Console.WriteLine(asd.Elapsed);
+
 
 //         }
 //         static void multipleprocess(object portionNumber)
@@ -62,6 +79,16 @@
 //             toplam += x;
 
 //         }
+//         static Action<object> akif = (object gg) =>
+//                 {
+//                     {
+//                         for (int ii = (int)gg * values.Length / Environment.ProcessorCount; ii < (int)gg
+//                         * (values.Length / Environment.ProcessorCount) + values.Length / Environment.ProcessorCount; ii++)
+//                         {
+//                             values[ii] = 1;
+//                         }
+//                     }
+//                 };
 
 
 

@@ -33,6 +33,7 @@
 //             {
 //                 t = new Random().Next(100);
 //             });
+//             Parallel.ForEach()
 //             System.Console.WriteLine(y.Elapsed);
 //             System.Console.WriteLine("multi foreach finished");
 //             y.Reset();
