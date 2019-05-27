@@ -1,0 +1,34 @@
+Time'a göre eventler olusturmayi gördük,capsuluteded time eventhandler'i gördük
+Eventhandler içerisine Timeeventargs alir ve bu sekilde bir elapsed bir time'a chainlenebilir,
+Bir metor Bir elased time chainlenmesini istersek su sekilde kullanilabilir
+	time.Elapsed+= await (timeeventhandler,eventargs)=> async SomeMethode(int bla,string blab);
+Yada ElapsedEventhandler parametre geçilirse dönüs tipi void olmasi gerekmekte,
+
+Function<int,string> test = i => "deneme"  seklinde metorlar tanimlanabilir Funciton bir delegate
+refaransini göstermektedir eger para metre dönmeden bir delegate referansi vereceksek bu 
+Action seklinde tanimlanmasi gerekmektedir, Ancak bunu compailer normal static metot tanimina 
+dönüstürebilmektedir,Bu tüzden sytatic sugar olarak görülebilir
+
+Expressioan tree ler farklidir bunlar bir süzgeç seklinde düsünülebilir,Bu treeye giren
+bir sekilde çikiyor ve compailer bunu bir metot olarak dönüstürmemekte yani syntatic sugar degildir
+
+Db baglantilarinda default olarak dbcontex objesi içerisine Expression tree alir 
+dbcontex.AsEnumarable yaparisek tüm tabloyu bir kerede almaktadir,
+Enumarable içerisine Func<Tresult> alirken bu sorgular databaseden tüm tabloyu alir ve metot içerisinde 
+islem yapmamiza neden olur buda sorgularin sismesi anlamina gelir,
+Querible içerisine Expression<Func<Tresult>> almaktadir 
+Querible Expression sql sorgusu olarak where gibi keywordler ekler
+
+Bir liste degiskeninden gelen int sayilari su sekilde kullanabiliriz,
+
+List<object> asd = new List<object>() { 1, 2, 3, 4, 5 };
+            IEnumerable<int> deneme = asd.AsQueryable().Cast<int>().Where(x => x > 2);
+            foreach (var s in deneme)
+                System.Console.WriteLine(s);
+//gelen bu int listesi IEnumarable bir degiskene atanir ve Linq orgusu çalistirilir.
+
+Büsra merhaba,2 hafta sonra yapmak istedigimiz deployment freeze denk geleceginden ötürü bu süreci 1 hafta öne çekip 
+        1 hafta içerisinde çikabilecek hatalari veya gelistirimleri devreye alabilirmiyiz,
+        Planimizda olmayan freeze ile birlikte 1 aylik süreyi,Suan için planladigimiz ve devreye almak istedigimiz iyilestirmeleri 
+        haftaya devreye alarak bu süreci atlatmak isteriz,
+        ,Bizim açimizdanda kullanici açisindanda bu sekilde hareket etmek daha iyi olacaktir,

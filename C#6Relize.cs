@@ -11,11 +11,6 @@
 // namespace C__Örneklerim
 // {
 //     /* 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> master
 //     */
 
 //     public class akif
