@@ -28,17 +28,17 @@
 //         static void Main(string[] args)
 //         {
 //             System.Console.WriteLine("started progress");
-//             Stopwatch asd = new Stopwatch();
-//             asd.Start();
+//             Stopwatch watch = new Stopwatch();
+//             watch.Start();
 //             var rnd = new Random(100);
 //             for (int i = 0; i < values.Length; i++)
 //             {
 //                 values[i] = (byte)rnd.Next(10);
 //             }
-//             System.Console.WriteLine(asd.Elapsed);
-//             asd.Reset();
-//             asd.Start();
-//             System.Console.WriteLine("MultipleThreading");
+//             System.Console.WriteLine(watch.Elapsed);
+//             watch.Reset();
+//             watch.Start();
+//             System.Console.WriteLine("multithreadprogress");
 //             Thread[] listth = new Thread[Environment.ProcessorCount];
 //             for (int t = 0; t < Environment.ProcessorCount; t++)
 //             {
@@ -48,21 +48,21 @@
 //             for (int tt = 0; tt < Environment.ProcessorCount; tt++)
 //                 listth[tt].Join();
 
-//             asd.Stop();
-//             System.Console.WriteLine(asd.Elapsed);
-//             asd.Reset();
-//             asd.Start();
-//             System.Console.WriteLine("MultipleTasking");
+//             watch.Stop();
+//             System.Console.WriteLine(watch.Elapsed);
+//             watch.Reset();
+//             watch.Start();
+//             System.Console.WriteLine("multiTasking");
 //             Task[] listth1 = new Task[Environment.ProcessorCount];
 //             for (int t = 0; t < Environment.ProcessorCount; t++)
 //             {
-//                 listth1[t] = Task.Factory.StartNew(akif, t);
-////new Task(akif, t).RunSynchronously(); Şeklinde syncron bir şekilde execute edilebilir,
+//                 listth1[t] = Task.Factory.StartNew(atomicProg, t);
+//                 //new Task(atomicProg, t).RunSynchronously(); Şeklinde syncron bir şekilde execute edilebilir,
 
-//
+
 //             }
 //             Task.WaitAll(listth1);
-//             System.Console.WriteLine(asd.Elapsed);
+//             System.Console.WriteLine(watch.Elapsed);
 
 
 //         }
@@ -79,7 +79,7 @@
 //             toplam += x;
 
 //         }
-//         static Action<object> akif = (object gg) =>
+//         static Action<object> atomicProg = (object gg) =>
 //                 {
 //                     {
 //                         for (int ii = (int)gg * values.Length / Environment.ProcessorCount; ii < (int)gg

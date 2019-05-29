@@ -18,6 +18,10 @@
 // */
 //     class Program
 //     {
+//  (int x, int y, int z) someuntraditionalthins(int z)
+//     {
+//         return (1, 2, 3);
+//     }
 //         static void Main(string[] args)
 //         {
 //             var t = g;
