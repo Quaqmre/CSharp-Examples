@@ -8,18 +8,14 @@ using System.Linq.Expressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Timers;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Net.Sockets;
+using System.Net;
 
-class deneme
-{
-    public int? x { get; set; }
-}
 class Program
 {
     static void Main()
     {
-        deneme x;
-        System.Console.WriteLine(x.x);
     }
-
 }
-//</snippet1>
