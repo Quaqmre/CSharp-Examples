@@ -11,8 +11,8 @@
 // Bize avantaj olarak her threadin bir üst fonsiyondaki static değişkeni değiştirmesinden ziyade,
 // Kendi iş ömürleri boyunca local statelerine veri atabilirler ve bu şekilde iş ömrü biten threadler
 // Thread sayısı kadar bu üst static değişkeni kitliyerek ekleme yapabilir,Performans açısından önemli bir katkı sağlar bu
-//Adındanda anlaşılacağı üzere benim forumda ()=>0,olarak geçen,Documantasyonlarda initial local state olarak geçen alan
-//Her paralel task için başlatıcı local değişken olarak kabul ediliyor,ve threde bir local state geçirmiş oluyoruz,
+// Adındanda anlaşılacağı üzere benim forumda ()=>0,olarak geçen,Documantasyonlarda initial local state olarak geçen alan
+// Her paralel task için başlatıcı local değişken olarak kabul ediliyor,ve threde bir local state geçirmiş oluyoruz,
 
 
 //  */
