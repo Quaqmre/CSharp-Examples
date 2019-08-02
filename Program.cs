@@ -1,22 +1,27 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Collections.Concurrent;
-using System.Diagnostics;
 using System.Linq;
-using System.Linq.Expressions;
 using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
-using System.IO;
-using System.Runtime.InteropServices;
-using System.Net.Sockets;
-using System.Net;
+using System.Threading.Tasks.Dataflow;
 
-class Program
+namespace C__Örneklerim
 {
-    static void Main()
+    /*
+   Bir file yazmak için kullanılmaktadır
+     */
+    class Program
     {
+        static void Main(string[] args)
+        {
+            List<int> lst = new List<int>() { 1, 2, 3, 4, 5, 6 };
+
+            var y = lst.Where(w => w > 2)
+            .OrderByDescending(c => c)
+            .Take(1)
+            .Select(x => x)
+            .FirstOrDefault();
+            System.Console.WriteLine(y);
+        }
     }
 }
 

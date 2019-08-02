@@ -5,6 +5,15 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
+// /*
+// subtotal olarak paralel for'a girdi olarak verdiğimiz alan threadlerin local statesini belirtir,
+// Thread işlemini yapıp bir süre bekler ise yine bu local statesine ulaşabilir
+// Bize avantaj olarak her threadin bir üst fonsiyondaki static değişkeni değiştirmesinden ziyade,
+// Kendi iş ömürleri boyunca local statelerine veri atabilirler ve bu şekilde iş ömrü biten threadler
+// Thread sayısı kadar bu üst static değişkeni kitliyerek ekleme yapabilir,Performans açısından önemli bir katkı sağlar bu
+// Adındanda anlaşılacağı üzere benim forumda ()=>0,olarak geçen,Documantasyonlarda initial local state olarak geçen alan
+// Her paralel task için başlatıcı local değişken olarak kabul ediliyor,ve threde bir local state geçirmiş oluyoruz,
+=======
 /*
 subtotal olarak paralel for'a girdi olarak verdiğimiz alan threadlerin local statesini belirtir,
 Thread işlemini yapıp bir süre bekler ise yine bu local statesine ulaşabilir
