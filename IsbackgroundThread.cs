@@ -15,18 +15,33 @@
 // */
 //     class Program
 //     {
+//         public static string x = "0";
 //         static int i = 0;
 
 //         static void Main(string[] args)
 //         {
 //             Thread t = new Thread(asd);
-//             t.IsBackground = true;
+//             System.Console.WriteLine("1");
 //             t.Start();
+//             Thread tt = new Thread(asd1);
+//             tt.Start();
+//             System.Console.WriteLine("2");
+//             Console.ReadLine();
 
 //         }
 //         static void asd()
 //         {
-//             System.Console.WriteLine(Thread.CurrentThread.IsBackground);
+//             while (true)
+//             {
+//                 x = x + "1";
+//             }
+//         }
+//         static void asd1()
+//         {
+//             while (true)
+//             {
+//                 x = x + "2";
+//             }
 //         }
 
 
